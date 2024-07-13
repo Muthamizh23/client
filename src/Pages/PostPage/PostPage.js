@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import PostCard from '../../components/postCard/PostCard'
-import NavigationBar from '../../components/NavBar/NavigationBar'
+// import NavigationBar from '../../components/NavBar/NavigationBar'
 import './PostPage.css'
 import Comment from '../../components/comments/Comment'
 function PostPage({match}) {
