@@ -2,10 +2,10 @@ import React, {useReducer, useEffect} from 'react'
 import {Container, Row, Col} from 'reactstrap'
 import Card from '../../components/card/Card'
 import 'bootstrap/dist/css/bootstrap.css'
-import axios from 'axios'
+// import axios from 'axios'
 import Pagination from '../../components/Pagination/Pagination'
-import Footer from '../../components/Footer/Footer'
-import NavigationBar from '../../components/NavBar/NavigationBar'
+// import Footer from '../../components/Footer/Footer'
+// import NavigationBar from '../../components/NavBar/NavigationBar'
 
 const initialUsers = {
   loading: true,

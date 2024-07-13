@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, {useMemo, useCallback } from "react";
 import { Formik } from "formik";
-import NavigationBar from "../../components/NavBar/NavigationBar";
-import Post from "../../components/ShortPost/ShortPost";
+// import NavigationBar from "../../components/NavBar/NavigationBar";
+// import Post from "../../components/ShortPost/ShortPost";
 function Login() {
   let whichSort = useMemo(
     () =>
@@ -12,8 +12,8 @@ function Login() {
     [window.location.pathname]
   );
 
-  const [posts, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [posts, setPosts] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
   // const [whichSort , setWhichSort] = useState()
 
   //quick sort    time complexity  O(n*logn)
@@ -66,29 +66,29 @@ function Login() {
   );
 
   // end of quick sort
-  const fetchPost = useCallback(async () => {
-    let data = null;
-    await fetch("http://localhost:9001/authors")
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        data = json;
-      })
-      .catch((excep) => {
-        console.log(excep);
-      });
+  // const fetchPost = useCallback(async () => {
+  //   let data = null;
+  //   await fetch("http://localhost:9001/authors")
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       console.log(json);
+  //       data = json;
+  //     })
+  //     .catch((excep) => {
+  //       console.log(excep);
+  //     });
 
-    let result = quickSort(data, 0, data.length - 1);
+    // let result = quickSort(data, 0, data.length - 1);
 
-    data = result.reverse().slice(0, 10);
+    // data = result.reverse().slice(0, 10);
     // console.log(data)
-    setIsLoading(false);
-    setPosts([...data]);
-  }, [quickSort]);
+  //   setIsLoading(false);
+  //   setPosts([...data]);
+  // }, [quickSort]);
 
-  useEffect(() => {
-    fetchPost();
-  }, [fetchPost, whichSort]);
+  // useEffect(() => {
+    // fetchPost();
+  // }, [fetchPost, whichSort]);
 
   return (
     <div>

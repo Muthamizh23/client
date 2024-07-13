@@ -27,7 +27,7 @@ function PostPage({match}) {
 
   const fetchComments = useCallback(async (id) => {
     console.log('Before fetch comment ')
-    const data = null;
+    var data = null;
     await fetch("http://localhost:9001/authors")
     .then((res) => res.json())
     .then((json) => {

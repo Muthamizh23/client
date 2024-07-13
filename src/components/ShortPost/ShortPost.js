@@ -1,8 +1,8 @@
-import React, {memo, useMemo} from 'react'
+import React, {memo} from 'react'
 import {Link} from 'react-router-dom'
 
 function ShortPost(props) {
-  let date = useMemo(() => new Date(props.date), [props.date])
+  // let date = useMemo(() => new Date(props.date), [props.date])
   return (
     <Link to={`/Post/${props.id}`}>
       <h5 className="list-group-item row">

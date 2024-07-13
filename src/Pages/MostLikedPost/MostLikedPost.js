@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useMemo, useCallback} from 'react'
-import NavigationBar from '../../components/NavBar/NavigationBar'
+// import NavigationBar from '../../components/NavBar/NavigationBar'
 import Post from '../../components/ShortPost/ShortPost'
 function MostLikedPost() {
   let whichSort = useMemo(
